@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Color-Changing Button</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<button id="colorButton">Click Me</button>
+
+<script src="script.js"></script>
+
+<script>
+  // Get the current hour
+  var currentHour = new Date().getHours();
+
+  // Define the greeting message based on the current hour
+  var greetingMessage;
+  if (currentHour < 12) {
+    greetingMessage = "Good morning!";
+  } else if (currentHour < 18) {
+    greetingMessage = "Good afternoon!";
+  } else {
+    greetingMessage = "Good evening!";
+  }
+
+  // Display the greeting message in an alert box
+  alert(greetingMessage);
+</script>
+
+
+<h2>Basic Calculator</h2>
+
+<input type="number" id="num1" placeholder="Enter first number">
+<input type="number" id="num2" placeholder="Enter second number">
+<button onclick="addNumbers()">Add</button>
+
+<p id="result"></p>
+
+<script>
+function addNumbers() {
+  // Get the input values
+  var num1 = parseFloat(document.getElementById('num1').value);
+  var num2 = parseFloat(document.getElementById('num2').value);
+
+  // Add the numbers together
+  var result = num1 + num2;
+
+  // Display the result
+  document.getElementById('result').textContent = 'Result: ' + result;
+}
+</script>
+
+
+</body>
+</html>
